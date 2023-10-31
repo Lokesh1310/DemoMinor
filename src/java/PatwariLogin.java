@@ -26,11 +26,16 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
   ResultSet rs=st.executeQuery("select * from PatwariLogin where UNAME='"+s1+"' AND UPASS='"+s2+"'");
   if(rs.next()){
       
-  out.println("WellCome");
-       
+      
+      
+      
+      
+      response.sendRedirect("AfterPatwariLogin.html");
+     
   }
   else{
-  out.println("INVALID USER NAME AND PASSWORLD");
+      response.sendRedirect("PatwariLogin.html");
+
   }  
 con.close();
   

@@ -4,7 +4,7 @@ import javax.servlet.http.*;
 
 import java.io.*;
 import java.sql.*;
-public class KisanLogin extends HttpServlet
+public class KisanDetail extends HttpServlet
 {
 public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException,ServletException
 {
@@ -16,6 +16,8 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 	
 	String s1=request.getParameter("u1");
 	String s2=request.getParameter("u2");
+        String s3=request.getParameter("u3");
+	
 	
 	
 	
@@ -23,16 +25,11 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection con=DriverManager.getConnection("jdbc:mysql:///Minor","root","1234");
   Statement st=con.createStatement();
-  ResultSet rs=st.executeQuery("select * from KisanLogin where UNAME='"+s1+"' AND UPASS='"+s2+"'");
-  if(rs.next()){
-      
-  
-  response.sendRedirect("KisanDetail.html");
-       
-  }
-  else{
-  out.println("INVALID USER NAME AND PASSWORLD");
-  }  
+    st.executeUpdate("insert into kisandetail values('"+s1+"','"+s2+"','"+s3+"');");
+   
+    
+    
+    response.sendRedirect("KisanDetail.html");
 con.close();
   
 	
