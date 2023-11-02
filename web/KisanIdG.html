@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Upload Page</title>
+    <link rel="stylesheet" type="text/css" href="xyz.css">
+</head>
+<body>
+    <h1>Upload Aadhar Card and Land Khasara</h1>
+    <form action="KisanIdG" method="post" enctype="multipart/form-data">
+        <h2>Kisan Name:</h2>
+        <input type="text" name="KN" required>
+        <br>
+
+        <h2>Aadhar Card Number:</h2>
+        <input type="text" name="ACN" required>
+        <br>
+
+        <h2>Upload Aadhar Card:</h2>
+        <input type="file" name="aadharCard" accept=".pdf, .jpg, .jpeg, .png" required>
+        <br>
+
+        <h2>Upload Land Khasara:</h2>
+        <input type="file" name="LandKhasara" accept=".pdf, .jpg, .jpeg, .png" required>
+        <br>
+
+        <button type="submit" id="uploadButton">Upload Documents</button>
+    </form>
+    <div id="message"></div>
+</body>
+</html>

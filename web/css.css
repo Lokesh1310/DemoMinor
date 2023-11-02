@@ -1,0 +1,98 @@
+/* Reset some default styles */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and set font styles */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+/* Menu styles */
+#mymenu {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#mymenu ul {
+    list-style: none;
+}
+
+#mymenu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#mymenu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Content container styles */
+#mydata {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styles */
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Heading styles */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* List styles */
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Link styles */
+a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+/* Scrolling content styles */
+#scrolling-content {
+    margin-top: 20px;
+}
+
+/* Marquee styles */
+marquee {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+}
