@@ -2,88 +2,90 @@
 <html>
 
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Ek+Mukta" rel="stylesheet">
+    <meta charset="UTF-8" />
     <link rel="stylesheet" href="abc.css">
     <style>
+     body {
+
+    background-image: url('l.jpg');
+    background-size: cover; /* Adjusts the image size to cover the entire body */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+   
+}
         header {
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
-
-        /* Additional styles for the image slider */
-        .slider-container {
+        .content-container {
             width: 100%;
             overflow: hidden;
         }
-
-        .slider-wrapper {
-            display: flex;
-            transition: transform 0.5s ease;
+        .content-wrapper {
+            white-space: nowrap;
+            animation: scroll 15s linear infinite;
         }
-
-        .slider-item {
-            width: 100%;
-            flex-shrink: 0;
+        .content-block {
+            display: inline-block;
+            width: 33%;
+            padding: 20px;
+            background-color: #f4f4f4;
+            box-sizing: border-box;
+            height: 200px;
+            overflow: hidden;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
     </style>
 </head>
 
 <body>
     <div id="mymenu">
-        <ul>
-            <li><a href="KisanIdG.html">Kisan Registration</a></li>
-            <li><a href="KisanLogin.html">Kisan LogIn</a></li>
-            <li><a href="PatwariLogin.html">Patwari LogIn</a></li>
-            <li><a href="OfficerLogin.html">Officer LogIn</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About Us</a></li>
+        <ul><li><a href="KisanIdG.html">किसान पंजीयन</a></li>
+            <li><a href="KisanLogin.html">किसान लॉगिन</a></li>
+            <li><a href="PatwariLogin.html">पटवारी लॉगिन</a></li>
+            <li><a href="OfficerLogin.html">अधिकारी लॉगिन</a></li>
+            <li><a href="contact.html">संपर्क</a></li>
+            <li><a href="contact.html">हमारे बारे में</a></li>
         </ul>
     </div>
 
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+        किसान समाचार: मध्य प्रदेश के किसानों के लिए नवाचार और योजनाएँ - अपडेट्स सबसे पहले!
+    </marquee>
+
     <div id="mydata">
         <header>
-            <h1>Welcome to Kisan Seva Kendra</h1>
+            <h1>किसान सेवा केंद्र में आपका स्वागत है</h1>
         </header>
-        <p>Kisan Ka Munafa Hamara Laksh</p>
+        <p>किसान का मुनाफ़ा हमारा लक्ष्य है</p>
     </div>
 
-    <!-- Image Slider -->
-    <div class="slider-container">
-        <div class="slider-wrapper">
-            <div class="slider-item"><img src="image1.jpg" alt="Image 1" height="250" width="1500" ></div>
-            <div class="slider-item"><img src="image2.jpg" alt="Image 2" height="250" width="1500"></div>
-            <div class="slider-item"><img src="image3.jpg" alt="Image 3"height="250" width="1500"></div>
+    <div class="content-container">
+        <div class="content-wrapper">
+            <div class="content-block">
+                <h2>किसान कल्याण</h2>
+                <p>हम किसानों के सामाजिक और आर्थिक कल्याण के लिए प्रतिबद्ध हैं।<br> हम उन्हें नवाचार, समृद्धि और सुरक्षा की दिशा में मदद करने के लिए विभिन्न <br>योजनाएँ प्रदान करते हैं.</p>
+            </div>
+            <div class="content-block">
+                <h2>किसान सेवाएँ</h2>
+                <p>हम किसानों को उनकी खेती को बेहतर बनाने,<br> उनके उत्पादों को बेचने में मदद करने और उनके जीवन को <br> सुखमय बनाने के लिए सेवाएँ प्रदान करते हैं.</p>
+            </div>
+            <div class="content-block">
+                <h2>किसानों के लिए संसाधन</h2>
+                <p>हम किसानों को उनकी खेती को मॉनिटर करने, <br>अधिक जानकारी प्राप्त करने और सामग्री की <br>आपूर्ति के लिए संसाधन प्रदान करते हैं.</p>
+            </div>
         </div>
     </div>
-
-    <script>
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.slider-item');
-
-        function updateSlider() {
-            const offset = -currentIndex * 100; // Adjust to your image width
-            document.querySelector('.slider-wrapper').style.transform = `translateX(${offset}%)`;
-        }
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % slides.length;
-            updateSlider();
-        }
-
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateSlider();
-        }
-
-        // Automatic slide transition
-        let autoSlideInterval = setInterval(nextSlide, 3000); // Change slides every 3 seconds
-
-        // Clear the interval when the page is unloaded
-        window.addEventListener('beforeunload', () => {
-            clearInterval(autoSlideInterval);
-        });
-    </script>
 </body>
 
 </html>
